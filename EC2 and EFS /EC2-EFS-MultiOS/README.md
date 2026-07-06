@@ -4,6 +4,10 @@ Create an EFS and connect it to 3 different EC2 instances. Make sure that all in
 
 That diagram shows the setup: one EFS file system with mount targets, shared across three EC2 instances (Ubuntu, Red Hat, Amazon Linux 2) sitting in the same VPC, all mounting over NFS on port 2049, gated by a security group that allows that traffic within the VPC.
 
+
+<img width="2720" height="1720" alt="image" src="https://github.com/user-attachments/assets/d0610530-253b-4fb6-ba28-e3ced9a6488a" />
+
+
 ## Theory behind it
 
 **Amazon EFS (Elastic File System)** is a managed, elastic **NFS (Network File System)**. Unlike EBS, which attaches to exactly one EC2 instance at a time, EFS is designed for **concurrent, shared access** — many instances, even across different Availability Zones and different operating systems, can mount the same file system at once and see the same files in real time.
