@@ -72,7 +72,7 @@ That first diagram covers the region-replication part of the case study. The sec
 
 ### A few things worth tightening up if you want this assignment to be more complete
 
-- **Security groups**: your screenshots show `0.0.0.0/0` open for SSH — worth noting in the write-up that production setups should restrict SSH to a known IP range (as AWS itself flags in the console).
-- **AZ awareness for EBS**: volumes and instances must be in the same Availability Zone — worth explicitly stating which AZ you used (`us-east-1d` in your screenshots) since it's a common source of "can't attach" errors.
+- **Security groups**: screenshots show `0.0.0.0/0` open for SSH — worth noting in the write-up that production setups should restrict SSH to a known IP range (as AWS itself flags in the console).
+- **AZ awareness for EBS**: volumes and instances must be in the same Availability Zone — worth explicitly stating which AZ you used (`us-east-1d` in the screenshots) since it's a common source of "can't attach" errors.
 - **Cost note**: an extended volume can't be shrunk back down, and EBS billing is by provisioned size regardless of usage — a one-line note on this shows awareness of the trade-off in step 4/9.
 - **Snapshot lifecycle**: mentioning AWS Data Lifecycle Manager for automating recurring snapshots (rather than one manual snapshot) would round out the "backup" task nicely for a case-study writeup.
